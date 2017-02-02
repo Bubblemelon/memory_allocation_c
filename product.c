@@ -6,7 +6,7 @@
 
 
 typedef struct {
-  /* complete */
+
 
   char* name;
   float price;
@@ -18,7 +18,6 @@ typedef struct {
 /* set the in_stock property to true */
 void product_init(void *src) {
 
-/* complete */
 
 // when newarray is called
 
@@ -33,7 +32,7 @@ void product_init(void *src) {
 
 void product_copy(void *_dst, const void *_src) {
 
-  /* complete */
+
 
   //when push or insertAtMyArray is called
 
@@ -51,7 +50,7 @@ void product_copy(void *_dst, const void *_src) {
 }
 
 void product_dtor(void *_elt) {
-  /* complete */
+
 
   //when free or pop is called
 
