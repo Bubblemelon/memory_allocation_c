@@ -5,3 +5,5 @@ C functions for memory allocation similar to the default constructor, copy const
 Uses malloc, strdup, pointer casting and function pointers.
 
 product.c file has more notes on usage.
+
+### Run ./products
