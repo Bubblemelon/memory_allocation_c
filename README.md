@@ -2,8 +2,8 @@
 C functions for memory allocation similar to the default constructor, copy constructor and the destructor in C++.
 
 ## Note
-Uses malloc, strdup, pointer casting and function pointers.
+This folder ( branch: "initial-mistakes" ) contains the mistakes I made on the init, copy and dtor functions. 
 
-product.c file has more notes on usage.
+Look at master branch for correct code.
 
 ### Run ./products
