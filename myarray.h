@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+//function pointers
 /* typdefs for compact struct */
 typedef void (ctor_f)(void *dst, const void *src);
 typedef void (dtor_f)(void *elt);

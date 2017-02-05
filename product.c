@@ -64,7 +64,7 @@ product_t *s = ( product_t *)_src;
 
 
 d->price = s->price; // this just copies over if it is in the stack (not heap)
-d->in_stock = d->in_stock; // this is on the stack
+d->in_stock = true; // this is on the stack
 
 /*
 *two ways of reallocate memory for a c string  either use "strdup" or "malloc"
@@ -75,13 +75,9 @@ d->name = strdup( s->name ); //strdup is defined in myarray.h under #include <st
 
 //or
 
-// d->name = ( char* )malloc( sizeof( 1 ) * strlen(s)+1 );  //size of 1 byte & the length of the string ( plus 1 for null terminator)
+// d->name = ( char* )malloc( sizeof( char ) * strlen(s)+1 );  //size of 1 byte & the length of the string ( plus 1 for null terminator)
 
-// !!!!!!!!!!!!!!!!
-// DO I STILL NEED TO CAST char* ?!?!?!?!!?!
-// http://stackoverflow.com/questions/1350376/function-pointer-as-a-member-of-a-c-struct
-// Floating point exception
-// !!!!!!!!!!!!!!!!!!!1
+
 
 }
 
@@ -101,11 +97,13 @@ void product_dtor(void *_elt) {
 
 }
 
-//function pointers
+//struct inline initilization : arrangement of functions must match controlBlock struct delaration
 controlBlock product_cb =
 {
-  //init_f;
-  //ctor
+sizeof(product_t),
+product_init,
+product_copy,
+product_dtor
  };
 
 
